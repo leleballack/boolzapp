@@ -1,7 +1,201 @@
 * {
-  background-color: grey;
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
+}
+
+/* Common */
+
+header, section {
+  width: 100%;
+  background-color: white;
+}
+header img, .chat_list img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+small {
+  color: grey;
+}
+::placeholder {
+  font-size: 15px;
+}
+h4, small {
+  margin: 0;
+  display: inline;
+  text-align: justify;
+  cursor: pointer;
+}
+p {
+  color: black;
+  padding: 10px;
+}
+
+/* Header  */
+
+.header_left {
+  width: 30%;
+  float: left;
+  height: 80px;
+  position: relative;
+  border: 0.5px solid rgba(0,0,0, 0.2);
+}
+.header_right {
+  width: 70%;
+  float: right;
+  height: 80px;
+  position: relative;
+  border: 0.5px solid rgba(0,0,0, 0.2);
+  overflow: hidden;
+}
+
+.icons_left, .icons_right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.icons_left i, .icons_right i, .search_bar i {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: grey;
+}
+.header_left img, .header_right img {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.header_right img {
+  margin-left: 20px;
+}
+.header_right small {
+  display: block;
+}
+
+
+/* Section */
+
+.container_left {
+  width: 30%;
+  float: left;
+  height: 550px;
+  position: relative;
+  overflow: scroll;
+}
+ .contact {
+   position: relative;
+   height: 80px;
+   padding-bottom: 30px;
+   border-bottom: 0.5px solid rgba(0,0,0, 0.4);
+ }
+
+ .contact img, .header_left img {
+   margin-left: 30px;
+   margin-top: 10px;
+
+ }
+ .name {
+   position: absolute;
+   top: 50%;
+   left: 100px;
+   margin-right: 20px;
+   transform: translateY(-50%);
+   margin-top: 0;
+ }
+
+.search-bar {
+  width: 100%;
+  display: inline;
+}
+.search_bar i {
+  margin-top: 10px;
+  margin-left: 30px;
+}
+.search_bar input {
+  width: 80%;
+  height: 30px;
+  float: right;
+  border: none;
+  margin-top: 10px;
+}
+.chat_list {
+  margin-top: 10px;
+}
+.container_left .chat_list small {
+  float: right;
+}
+
+.container_right {
+  width: 70%;
+  height: 550px;
+  background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/whatsapp-chat-background-image.jpg");
+  background-size: cover;
+  float:left;
+  position: relative;
+}
+.message_box {
+  height: 500px;
+  margin: 0 100px;
+  position: relative;
+}
+.message {
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+.message h6 {
+  float: right;
+  margin-right: 10px;
+  color: grey;
+  display: inline;
+}
+.message p {
+  color: black;
+  font-size: 14px;
+}
+.message i {
+  color: grey;
+  float: right;
+  cursor: pointer;
+}
+
+.white {
+  background-color: white;
+  border-radius: 10px;
+  min-width: 150px;
+  min-height: 50px;
+  max-width: 350px;
+  float: left;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.green {
+  background-color: lightgreen;
+  border-radius: 10px;
+  min-width: 150px;
+  min-height: 50px;
+  max-width: 350px;
+  float: right;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+footer {
+  background-color: white;
+}
+footer .type_message input {
+  width: 85%;
+  height: 50px;
+  border: none;
+}
+.type_message i {
+  font-size: 20px;
+  margin: 0 10px;
+  cursor: pointer;
 }
