@@ -74,6 +74,7 @@ p {
 
 .header_right img {
   margin-left: 20px;
+  margin-top: 10px;
 }
 .header_right small {
   display: block;
@@ -139,17 +140,23 @@ p {
   background-size: cover;
   float:left;
   position: relative;
+  overflow: scroll;
 }
 .message_box {
-  height: 500px;
-  margin: 0 100px;
+  height: 700px;
+  margin: 0 50px;
   position: relative;
+}
+.message_box::after {
+  display: table;
+  content: " ";
+  clear: both;
 }
 .message {
   width: 100%;
-  display: block;
-  text-align: left;
+  margin-top: 10px;
 }
+
 .message h6 {
   float: right;
   margin-right: 10px;
@@ -164,28 +171,27 @@ p {
   color: grey;
   float: right;
   cursor: pointer;
+  z-index: 2;
 }
 
 .white {
   background-color: white;
   border-radius: 10px;
-  min-width: 150px;
-  min-height: 50px;
-  max-width: 350px;
+  max-width: 45%;
   float: left;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  clear: both;
+  margin-bottom: 5px;
+  /* margin-top: 10px; */
 }
 .green {
   background-color: lightgreen;
   border-radius: 10px;
-  min-width: 150px;
-  min-height: 50px;
-  max-width: 350px;
+  max-width: 45%;
   float: right;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  clear: both;
+  margin-bottom: 5px;
 }
+
 footer {
   background-color: white;
 }
@@ -198,4 +204,7 @@ footer .type_message input {
   font-size: 20px;
   margin: 0 10px;
   cursor: pointer;
+}
+.template, .template_two {
+  display: none;
 }
