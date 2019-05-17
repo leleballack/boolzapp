@@ -22,6 +22,7 @@ small {
 }
 ::placeholder {
   font-size: 15px;
+  font-weight: bold;
 }
 h4, small {
   margin: 0;
@@ -88,7 +89,7 @@ p {
   float: left;
   height: 550px;
   position: relative;
-  overflow: scroll;
+  overflow-y: scroll;
 }
  .contact {
    position: relative;
@@ -97,11 +98,20 @@ p {
    border-bottom: 0.5px solid rgba(0,0,0, 0.4);
  }
 
+ .contact.active {
+   background-color: rgba(0, 0, 0, 0.15)
+ }
+
  .contact img, .header_left img {
    margin-left: 30px;
    margin-top: 10px;
 
  }
+ .sentence {
+   display: block;
+   text-align: justify;
+ }
+
  .name {
    position: absolute;
    top: 50%;
@@ -110,7 +120,6 @@ p {
    transform: translateY(-50%);
    margin-top: 0;
  }
-
 .search-bar {
   width: 100%;
   display: inline;
@@ -128,6 +137,7 @@ p {
 }
 .chat_list {
   margin-top: 10px;
+  height: calc(100% - 80px - 30px);
 }
 .container_left .chat_list small {
   float: right;
@@ -135,17 +145,21 @@ p {
 
 .container_right {
   width: 70%;
-  height: 550px;
+  height: 500px;
   background-image: url("https://backgrounddownload.com/wp-content/uploads/2018/09/whatsapp-chat-background-image.jpg");
   background-size: cover;
   float:left;
   position: relative;
-  overflow: scroll;
+}
+
+.hidden {
+  display: none;
 }
 .message_box {
-  height: 700px;
-  margin: 0 50px;
+  height: 500px;
   position: relative;
+  overflow-y: scroll;
+  padding: 0 50px;
 }
 .message_box::after {
   display: table;
@@ -155,6 +169,7 @@ p {
 .message {
   width: 100%;
   margin-top: 10px;
+  position: relative;
 }
 
 .message h6 {
@@ -168,10 +183,18 @@ p {
   font-size: 14px;
 }
 .message i {
+  display: none;
   color: grey;
   float: right;
   cursor: pointer;
   z-index: 2;
+  position: absolute;
+  top: 80%;
+  right: 40px;
+  transform: translate(-50%);
+}
+.message:hover i {
+  display: block;
 }
 
 .white {
@@ -191,12 +214,13 @@ p {
   clear: both;
   margin-bottom: 5px;
 }
-
 footer {
   background-color: white;
+  position: fixed;
+  width: 100%;
 }
 footer .type_message input {
-  width: 85%;
+  width: 60%;
   height: 50px;
   border: none;
 }
@@ -205,6 +229,6 @@ footer .type_message input {
   margin: 0 10px;
   cursor: pointer;
 }
-.template, .template_two {
+.template, .template_two, .message_dropdown {
   display: none;
 }

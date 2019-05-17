@@ -21,8 +21,8 @@
       <div class="header_right">
         <img src="http://www.professionalcounselingschool.it/wp-content/uploads/2019/04/Socrate-300x300.jpg" alt="openchat">
         <div class="name">
-          <h4>Socrates</h4>
-          <small>Last seen yesterday at 6:30 PM</small>
+          <h4 class="firstname">Socrates</h4>
+          <small>Last seen today at <span class="message_time">18:30</span></small>
         </div>
         <div class="icons_right">
         <i class="fas fa-search"></i>
@@ -39,14 +39,13 @@
           <input class="searchme" type="text" placeholder="Search or start new chat">
         </div>
         <div class="chat_list">
-          <div class="contact">
-            <img src="https://portal-ilmu.com/wp-content/uploads/2016/03/plato-300x300.jpg" alt="">
+          <div class="contact active">
+            <img src="http://www.professionalcounselingschool.it/wp-content/uploads/2019/04/Socrate-300x300.jpg" alt="openchat">
             <div class="name">
-              <h4 class="firstname">Plato</h4><small>6:35</small>
-              <small>Human behavior flows from three main sources: desire, emotion, and knowledge</small>
+              <h4 class="firstname">Socrates</h4><small class="message_time">06:35</small><br>
+              <small class="sentence">True knowledge exists in knowing that you know nothing</small>
             </div>
           </div>
-
           <div class="contact">
             <img src="https://optimizehq.imgix.net/authors/headshots/marcus-aurelius.jpg" alt="">
             <div class="name">
@@ -54,7 +53,6 @@
               <small>The happiness of your life depends upon the quality of your thoughts</small>
             </div>
           </div>
-
           <div class="contact">
             <img src="https://tvaraj.files.wordpress.com/2016/02/epicurys-ancient-greek-philosopher.jpg?w=474" alt="">
             <div class="name">
@@ -62,15 +60,13 @@
               <small>Do not spoil what you have by desiring what you have not</small>
             </div>
           </div>
-
           <div class="contact">
-            <img src="https://cdn.britannica.com/s:300x300/84/87984-004-5ADE9ACA.jpg" alt="">
+            <img src="https://portal-ilmu.com/wp-content/uploads/2016/03/plato-300x300.jpg" alt="">
             <div class="name">
-            <h4 class="firstname">Aristotle</h4><small>Saturday</small>
-              <small>We are what we repeatedly do. Excellence, then, is not an act, but a habit</small>
+              <h4 class="firstname">Plato</h4><small>Friday</small>
+              <small>Human behavior flows from three main sources: desire, emotion, and knowledge</small>
             </div>
           </div>
-
           <div class="contact">
             <img src="https://i1.wp.com/www.benetworthy.com/wp-content/uploads/2016/11/confucius-for-website.jpg?fit=300%2C300&ssl=1" alt="">
             <div class="name">
@@ -78,7 +74,6 @@
               <small>The man who moves a mountain begins by carrying away small stones</small>
             </div>
           </div>
-
           <div class="contact">
             <img src="https://i.warosu.org/data/lit/img/0097/91/1500752210249.jpg" alt="">
             <div class="name">
@@ -86,7 +81,6 @@
               <small>Where the willingness is great, the difficulties cannot be great</small>
             </div>
           </div>
-
           <div class="contact">
             <img src="http://www.latestseotutorial.com/wp-content/uploads/2017/09/buddha-300x300.jpg" alt="">
             <div class="name">
@@ -94,7 +88,6 @@
               <small>Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment</small>
             </div>
           </div>
-
           <div class="contact">
             <img src="https://img.discogs.com/ELEv7c6VnzdY6CuPFQTAsD1jR34=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-7040615-1432320947-6861.jpeg.jpg" alt="">
             <div class="name">
@@ -107,15 +100,158 @@
 
       <div class="container_right">
         <div class="message_container">
-          <div class="message_box">
+
+          <div class="message_box active">
             <div class="message white">
               <p>True knowledge exists in knowing that you know nothing</p>
-              <h6>5:15</h6><i class="fas fa-chevron-down"></i>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
             </div>
 
             <div class="message green">
               <p>Imagination is more important than knowledge</p>
-              <h6>5:30</h6><i class="fas fa-chevron-down"></i>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+          </div>
+          <div class="message_box hidden">
+            <div class="message white">
+              <p>True knowledge exists in knowing that you know nothing</p>
+              <h6>05:15</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
+            </div>
+
+            <div class="message green">
+              <p>Imagination is more important than knowledge</p>
+              <h6>05:30</h6><i class="fas fa-chevron-down"></i>
+              <div class="message_dropdown">
+                <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+                <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+              </div>
             </div>
           </div>
         </div>
@@ -135,9 +271,12 @@
         <div class="message green">
           <p class="content">Something new</p>
           <h6 class="message_time">5:55</h6><i class="fas fa-chevron-down"></i>
+          <div class="message_dropdown">
+            <div class="message_info"><i class="fas fa-info-circle"></i>Info</div>
+            <div class="message_delete"><i class="fas fa-trash-alt"></i>Delete</div>
+          </div>
         </div>
     </div>
-
 
     <script src="boolzapp.js" charset="utf-8"></script>
   </body>

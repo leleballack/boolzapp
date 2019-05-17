@@ -1,12 +1,12 @@
 
 $(function (){
+
   $(".fa-paper-plane").click(function(){
     var text = $(".type_here").val();
     if (text) {
       var new_text = $(".template .message").clone();
       new_text.children(".content").text(text);
-      var current_time = new Date();
-      new_text.children(".message_time").text(current_time.getHours() + ":" + current_time.getMinutes());
+      new_text.children(".message_time").text(current_time());
       $(".message_box").append(new_text);
     };
     $(".type_here").val("");
@@ -14,10 +14,13 @@ $(function (){
     setTimeout (function (){
       var new_text = $(".template .message").clone();
       new_text.toggleClass("green white");
-      new_text.children(".content").text("You're right!");
-      new_text.children(".message_time").text(current_time.getHours() + ":" + current_time.getMinutes());
+      new_text.children(".content").text("Strong minds discuss ideas, average minds discuss events, weak minds discuss people");
+      new_text.children(".message_time").text(current_time());
       $(".message_box").append(new_text);
-    }, 1500);
+      $(".chat_list").find(".sentence").text("Strong minds discuss ideas, average minds discuss events, weak minds discuss people").css("color", "black").css("font-weight","Bold");
+      $(".header_right").find(".message_time").text(current_time());
+      $(".chat_list").find(".message_time").text(current_time());
+    }, 1000);
 
   });
     $(".type_here").keypress(function(e) {
@@ -39,3 +42,17 @@ $(function (){
       });
     });
 });
+
+function current_time() {
+   var d = new Date();
+   var m = d.getMinutes();
+   var h = d.getHours();
+
+   if (m < 10) {
+     m = "0" + m;
+   };
+   if (h < 10) {
+     h = "0" + h;
+   }
+   return h + ":" + m;
+};
