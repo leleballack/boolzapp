@@ -151,7 +151,7 @@ p {
   float:left;
   position: relative;
 }
-.message_box.active, .message_options.active {
+.message_box.active, .message .message_options.active {
   display: block;
 }
 

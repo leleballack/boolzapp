@@ -57,16 +57,14 @@ $(function (){
     $(".header_right").children("img").attr("src", photo)
   });
 
-  $(".message i").click(function() {
-    $(".message_options").toggle("active")
-
+  $(document).on("click", ".message i", function() {
+    $(this).parent(".message").find(".message_options").toggleClass("active");
   });
 
-  $(".message_delete").click(function() {
-    $(".message").hide();
+  $(document).on("click", ".message_delete", function() {
+    $(this).closest(".message").hide();
   });
 });
-
 
 function current_time() {
    var d = new Date();
