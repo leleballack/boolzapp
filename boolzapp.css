@@ -151,15 +151,16 @@ p {
   float:left;
   position: relative;
 }
-
-.hidden {
-  display: none;
+.message_box.active, .message_options.active {
+  display: block;
 }
+
 .message_box {
   height: 500px;
   position: relative;
   overflow-y: scroll;
   padding: 0 50px;
+  display: none;
 }
 .message_box::after {
   display: table;
@@ -168,7 +169,6 @@ p {
 }
 .message {
   width: 100%;
-  margin-top: 10px;
   position: relative;
 }
 
@@ -203,8 +203,8 @@ p {
   max-width: 45%;
   float: left;
   clear: both;
-  margin-bottom: 5px;
-  /* margin-top: 10px; */
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 .green {
   background-color: lightgreen;
@@ -212,15 +212,17 @@ p {
   max-width: 45%;
   float: right;
   clear: both;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 footer {
   background-color: white;
-  position: fixed;
+  position: absolute;
   width: 100%;
+  top: 110%;
+  transform: translateY(-110%);
 }
 footer .type_message input {
-  width: 60%;
+  width: 85%;
   height: 50px;
   border: none;
 }
@@ -229,6 +231,28 @@ footer .type_message input {
   margin: 0 10px;
   cursor: pointer;
 }
-.template, .template_two, .message_dropdown {
+.template {
   display: none;
+}
+.message_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.template .message_options, .message .message_options {
+  display: none;
+  background-color: white;
+  position: absolute;
+  left: 270px;
+  top: 20px;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.message_info, .message_delete {
+  color: black;
+  padding: 15px 15px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
 }

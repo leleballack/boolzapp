@@ -7,23 +7,25 @@ $(function (){
       var new_text = $(".template .message").clone();
       new_text.children(".content").text(text);
       new_text.children(".message_time").text(current_time());
-      $(".message_box").append(new_text);
+      $(".message_box.active").append(new_text);
+      $(".message_box").scrollTop(10000);
     };
     $(".type_here").val("");
 
     setTimeout (function (){
       var new_text = $(".template .message").clone();
       new_text.toggleClass("green white");
-      new_text.children(".content").text("Strong minds discuss ideas, average minds discuss events, weak minds discuss people");
+      new_text.children(".content").text("Happiness is the meaning and purpose of life, the aim and end of one's existence");
       new_text.children(".message_time").text(current_time());
-      $(".message_box").append(new_text);
-      $(".chat_list").find(".sentence").text("Strong minds discuss ideas, average minds discuss events, weak minds discuss people").css("color", "black").css("font-weight","Bold");
+      $(".message_box.active").append(new_text);
       $(".header_right").find(".message_time").text(current_time());
-      $(".chat_list").find(".message_time").text(current_time());
+      $(".chat_list").children(".contact.active").find(".sentence").text("Happiness is the meaning and purpose of life, the aim and end of one's existence").css("color", "black").css("font-weight","Bold");
+      $(".chat_list").children(".contact.active").find(".message_time").text(current_time());
+      $(".message_box").scrollTop(10000);
     }, 1000);
 
   });
-    $(".type_here").keypress(function(e) {
+  $(".type_here").keypress(function(e) {
       var key = e.which;
       if (key == 13) {
         $(".fa-paper-plane").click();
@@ -31,7 +33,7 @@ $(function (){
       }
     });
 
-    $(".searchme").keyup(function() {
+  $(".searchme").keyup(function() {
       var lookup = $(this).val().toLowerCase();
       $(".contact").each(function() {
         if ($(this).find(".firstname").text().toLowerCase().includes(lookup)) {
@@ -41,7 +43,30 @@ $(function (){
         }
       });
     });
+
+  $(".contact").click(function() {
+    var talk = $(this).attr("data-chat");
+    var talkscreen = $('.message_box[data-chat="'+talk+'"]');
+    $(".message_box").removeClass("active");
+    $(".contact").removeClass("active");
+    talkscreen.addClass("active");
+    $(this).addClass("active");
+    var name = $(".contact.active").find(".firstname").text();
+    $(".header_right").children(".name").find(".firstname").text(name);
+    var photo = $(this).find("img").attr("src");
+    $(".header_right").children("img").attr("src", photo)
+  });
+
+  $(".message i").click(function() {
+    $(".message_options").toggle("active")
+
+  });
+
+  $(".message_delete").click(function() {
+    $(".message").hide();
+  });
 });
+
 
 function current_time() {
    var d = new Date();
